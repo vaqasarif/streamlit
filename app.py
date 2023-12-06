@@ -3,7 +3,7 @@ import joblib
 import numpy as np
 
 # Load the trained model
-model = joblib.load('your_model.joblib')
+model = joblib.load("https://github.com/vaqasarif/streamlit/blob/main/response.joblib")
 
 # Title of the web app
 st.title('Machine Learning Model Deployment')
