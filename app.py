@@ -22,7 +22,7 @@ st.title('Machine Learning Model Deployment')
 # Create input fields for the form
 input_fields = []
 for i in range(10):
-    input_fields.append(st.text_input(f'Input {i+1}', value=''))
+    input_fields.append(st.text_input(f'Respondent Evaluation Criteria {i+1}', value=''))
 
 # Convert input data to a numpy array
 input_data = np.array([str(field) for field in input_fields])
@@ -36,4 +36,4 @@ if st.button('Predict'):
     prediction = model.predict(input_data)
     
     # Display the prediction
-    st.write(f'The predicted output is: {prediction[0]}')
+    st.write(f'The predicted Respondent Level Is: {prediction[0]}')
