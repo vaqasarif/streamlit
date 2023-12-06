@@ -25,7 +25,7 @@ for i in range(10):
     input_fields.append(st.text_input(f'Input {i+1}', value=''))
 
 # Convert input data to a numpy array
-input_data = np.array([int(field) for field in input_fields])
+input_data = np.array([str(field) for field in input_fields])
 
 # Make a prediction when a button is clicked
 if st.button('Predict'):
