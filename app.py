@@ -7,7 +7,7 @@ from io import BytesIO
 # Load the trained model
 
 # Define the URL to the raw joblib file on GitHub
-model_url = "https://github.com/vaqasarif/streamlit/blob/main/response.joblib"
+model_url = "https://raw.githubusercontent.com/vaqasarif/streamlit/main/response.joblib"
 
 # Download the model file from GitHub
 response = requests.get(model_url)
