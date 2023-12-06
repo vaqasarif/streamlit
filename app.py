@@ -1,9 +1,20 @@
 import streamlit as st
 import joblib
 import numpy as np
+import requests
+from io import BytesIO
 
 # Load the trained model
-model = joblib.load("https://github.com/vaqasarif/streamlit/blob/main/response.joblib")
+
+# Define the URL to the raw joblib file on GitHub
+model_url = "https://github.com/vaqasarif/streamlit/blob/main/response.joblib"
+
+# Download the model file from GitHub
+response = requests.get(model_url)
+model_bytes = BytesIO(response.content)
+
+# Load the model
+model = joblib.load(model_bytes)
 
 # Title of the web app
 st.title('Machine Learning Model Deployment')
